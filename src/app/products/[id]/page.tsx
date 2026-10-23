@@ -8,8 +8,7 @@ import {
   Dumbbell,
   Gauge,
   Repeat,
-  CalendarPlus,
-  Bookmark,
+ 
 } from "lucide-react";
 import DetailsPageButton from "@/components/DetailsPageButton";
 
@@ -52,7 +51,6 @@ export default async function WorkoutDetails({ params }: Props) {
           />
         </div>
 
-        {/* Right: Workout Details */}
         <div>
           <h1 className="text-2xl font-extrabold uppercase text-gray-900 sm:text-4xl">
             {workout.name}
