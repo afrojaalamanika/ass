@@ -1,12 +1,9 @@
 "use client";
 
 import React, { useState } from 'react';
-import { useExerciseContext } from '../context/ExerciseContext';
-import { useSegmentState } from 'next/dist/next-devtools/userspace/app/segment-explorer-node';
 
-const page = () => {
+const Page = () => {
 
-const {myplan,setMyplan, saved, setSaved} = useExerciseContext();
 
 const[activeTab,setActiveTab] = useState<"saved" | "myplan">("myplan")
 
@@ -18,17 +15,17 @@ const[activeTab,setActiveTab] = useState<"saved" | "myplan">("myplan")
        <div className="stats shadow flex items-baseline-last">
   <div className="stat place-items-center">
     <div className="stat-title">Excersize</div>
-    <div className="stat-value">31K</div>
+    <div className="stat-value"></div>
   </div>
 
   <div className="stat place-items-center">
     <div className="stat-title">Calories</div>
-    <div className="stat-value">4,200</div>
+    <div className="stat-value"></div>
   </div>
 
   <div className="stat place-items-center">
     <div className="stat-title">Minutes</div>
-    <div className="stat-value">1,200</div>
+    <div className="stat-value"></div>
   </div>
 </div>
 {/* name of each tab group should be unique */}
@@ -55,4 +52,4 @@ const[activeTab,setActiveTab] = useState<"saved" | "myplan">("myplan")
     );
 };
 
-export default page;
+export default Page;

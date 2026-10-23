@@ -13,7 +13,6 @@ const DetailsPageButton = ({product} : {product:IProducts}) => {
 
 const {myplan, setMyplan, saved, setSaved} = useExerciseContext();
 
-const isSaved = saved.length >=5;
 const alreadInSaved =saved.some((item) => item.id === product.id)
 const alreadInMyPlan =myplan.some((item) => item.id === product.id)
 

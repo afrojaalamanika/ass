@@ -1,7 +1,6 @@
 "use client";
-
+import { ReactNode } from "react";
 import { ProductProvider } from "@/app/context/ExerciseContext";
-import { Children } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Toaster } from "react-hot-toast";

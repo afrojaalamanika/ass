@@ -1,5 +1,6 @@
 import { IProducts } from '@/types/product.type';
 import React from 'react';
+import Image from 'next/image';
 import Link from "next/link";
 import {
   Clock3,
@@ -21,9 +22,10 @@ const AllProductCard = ({product} : {product:IProducts}) => {
     <article className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
       {/* Exercise image */}
       <div className="h-52 overflow-hidden bg-gray-100">
-        <img
+        <Image
           src={product.image}
-          alt={product.name}
+          alt={product.name}  width={400}
+    height={208}
           className="h-full w-full object-cover"
         />
       </div>

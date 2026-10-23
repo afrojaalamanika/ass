@@ -11,7 +11,7 @@ import {
  
 } from "lucide-react";
 import DetailsPageButton from "@/components/DetailsPageButton";
-
+export const instant = false;
 type Props = {
   params: Promise<{ id: string }>;
 };
@@ -39,7 +39,7 @@ export default async function WorkoutDetails({ params }: Props) {
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2 lg:gap-12">
 
         {/* Left: Workout Image */}
-        <div className="relative overflow-hidden rounded-3xl bg-gray-200 sm:min-h-[550px]">
+        <div className="relative overflow-hidden rounded-3xl bg-gray-200 sm:min-h-550px">
           <Image
             src={workout.image}
             alt={workout.name}
