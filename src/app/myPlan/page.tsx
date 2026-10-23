@@ -9,14 +9,6 @@ const page = () => {
 const {myplan,setMyplan, saved, setSaved} = useExerciseContext();
 
 const[activeTab,setActiveTab] = useState<"saved" | "myplan">("myplan")
-// const [sortBy, setSortBy] = useState<"duration"|"rating" | "calolries">(
-//     "duration"
-// )
-
-// const [orderedId, setOrderedId] = useState<number[]>([]);
-
-
-// const currentList = activeTab === "myplan" ? myplan:saved;
 
 
     return (
