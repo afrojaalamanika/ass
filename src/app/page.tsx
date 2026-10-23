@@ -2,7 +2,7 @@ import AllProducts from "@/components/AllProducts";
 import Banner from "@/components/Banner";
 import { getAllproducts } from "@/lib/api";
 import { IProducts } from "@/types/product.type";
-import Image from "next/image";
+
 
 export default async function Home() {
 const data = await getAllproducts()
