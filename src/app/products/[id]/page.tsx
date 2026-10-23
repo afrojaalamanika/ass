@@ -50,7 +50,6 @@ export default async function WorkoutDetails({ params }: Props) {
             className="object-cover"
           />
         </div>
-
         <div>
           <h1 className="text-2xl font-extrabold uppercase text-gray-900 sm:text-4xl">
             {workout.name}
@@ -60,7 +59,7 @@ export default async function WorkoutDetails({ params }: Props) {
             {workout.description}
           </p>
 
-          {/* Category Tags */}
+          
           <div className="mt-5 flex flex-wrap gap-2">
             {workout.muscleGroups.map((muscle: string) => (
               <span
