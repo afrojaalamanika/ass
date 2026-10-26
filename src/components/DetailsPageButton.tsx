@@ -10,8 +10,10 @@ import { IProducts } from '@/types/product.type';
 import toast from 'react-hot-toast';
 const DetailsPageButton = ({product} : {product:IProducts}) => {
 
-
 const {myplan, setMyplan, saved, setSaved} = useExerciseContext();
+const isMyplanFull = myplan.length >=5;
+
+
 
 const alreadInSaved =saved.some((item) => item.id === product.id)
 const alreadInMyPlan =myplan.some((item) => item.id === product.id)
@@ -21,9 +23,11 @@ const handleAddToMyPlan =() =>{
         toast.error("already in My Plan")
         return;
     }
-
+    if(isMyplanFull){
+      toast.error("already in My Plan")
+    }
     setMyplan(prev=>[...prev, product])
-    toast.success("Added top My Plan");
+    toast.success("Added to My Plan");
 }
 const handleAddToSaved =() =>{
     if(alreadInSaved){
@@ -32,7 +36,7 @@ const handleAddToSaved =() =>{
     }
 
     setSaved(prev=>[...prev, product])
-    toast.success("Added top Saved");
+    toast.success("Added to Saved");
 }
 
 
@@ -40,7 +44,7 @@ const handleAddToSaved =() =>{
        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <button 
               type="button" 
-disabled={alreadInMyPlan}
+disabled={isMyplanFull}
 onClick={handleAddToMyPlan}
 
               className="flex flex-1 items-center justify-center gap-2 rounded-xl disabled:cursor-not-allowed disabled:pointer-events-auto bg-orange-500 px-5 py-4 font-bold text-white transition hover:bg-orange-600"
@@ -52,7 +56,7 @@ onClick={handleAddToMyPlan}
             <button
               type="button"
               onClick={handleAddToSaved}
-              disabled={alreadInSaved}
+          
               className="flex flex-1 items-center justify-center gap-2 rounded-xl disabled:cursor-not-allowed disabled:pointer-events-auto border border-gray-300 bg-white px-5 py-4 font-bold text-gray-700 transition hover:bg-gray-100"
             >
               <Bookmark size={19} />

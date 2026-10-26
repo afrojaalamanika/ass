@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import NavbarButtons from './NavbarButtons';
 
 const Navbar = () => {
     return (
@@ -32,8 +33,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className=" flex gap-4 navbar-end">
-    <a className="btn">Plan</a>
-    <a className="btn">saved</a>
+    <NavbarButtons></NavbarButtons>
   </div>
 </div>
     );
