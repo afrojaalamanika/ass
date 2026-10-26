@@ -22,4 +22,4 @@ FitLog is a workout planning website that helps users explore exercises and orga
 ## Author
 Afroja Alam Anika
 
-[GitHub Repository](https://github.com/afrojaalamanika/ass)
+
